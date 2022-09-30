@@ -1,0 +1,109 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    font-size: 62.5%;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.container {
+    width: 80%;
+    max-width: 500px;
+    margin: auto;
+    padding: 1em 1em;
+    border: 0.1em solid rgb(0, 0, 0);
+    background-color: #000000e8;
+    display: flex;
+    flex-direction: column;
+    color: rgb(14, 162, 182);
+    border-radius: 15px;
+}
+
+.container .container_title {
+    font-size: 3em;
+    color: #c9220c;
+    padding: 1rem 0;
+}
+
+.label {
+    font-size: 2em;
+    margin: 0.1rem;
+    padding: 0.1rem;
+}
+
+.container .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.input-num {
+    padding: 1em 0 1em 0.5em;
+    font-size: 2em;
+    color: rgb(185, 97, 14);
+}
+
+.option-container {
+    width: 100%;
+    padding: 1em 0.5em;
+    font-size: 2em;
+    font-weight: bold;
+    /* margin: 0.1em auto; */
+    letter-spacing: 0.5px;
+}
+
+.btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .form .btn {
+    padding: 1em;
+    font-size: 1.7em;
+    font-weight: bold;
+    background-color: #1b0386;
+    border: 1px solid #9390ff;
+    border-radius: 4px;
+}
+
+.container .form .answer {
+    font-size: 2em;
+    text-align: center;
+    border: 1px solid rgb(238, 255, 0);
+}
+
+.container .form .answer .ans-text {
+    font-size: 2em;
+    overflow-wrap: break-word;
+}
+
+.small {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 320px) {
+    body {
+        font-size: 50%;
+    }
+}
