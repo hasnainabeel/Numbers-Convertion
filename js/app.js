@@ -23,6 +23,76 @@ function BinaryToDecimalConverter(baseTwo) {
     return num
 }
 
+function DecimalToHexaDecimal(baseTen) {
+    let HexaNo = []
+    while (baseTen > 0) {
+        let rem = baseTen % 16
+        if (rem < 10) {
+            HexaNo.unshift(rem)
+        }
+        else if (rem == 10) {
+            HexaNo.unshift('A')
+        }
+        else if (rem == 11) {
+            HexaNo.unshift('B')
+        }
+        else if (rem == 12) {
+            HexaNo.unshift('C')
+        }
+        else if (rem == 13) {
+            HexaNo.unshift('D')
+        }
+        else if (rem == 14) {
+            HexaNo.unshift('E')
+        }
+        else if (rem == 15) {
+            HexaNo.unshift('F')
+        }
+        baseTen = Math.floor(baseTen / 16)
+    }
+    return HexaNo.join("")
+}
+
+function HexaDecimalToDecimal(baseSixteen) {
+    let numArr = baseSixteen.toString().split("")
+    let power = 0
+    let DecimalNo = 0
+    for (let i = numArr.length - 1; i >= 0; i--) {
+        let num = 0
+        if (numArr[i] < 10) {
+            num = numArr[i] * (16 ** power)
+            DecimalNo += num
+        }
+        else if (numArr[i] == 'A') {
+            num = 10 * (16 ** power)
+            DecimalNo += num
+        }
+        else if (numArr[i] == 'B') {
+            num = 11 * (16 ** power)
+            DecimalNo += num
+        }
+        else if (numArr[i] == 'C') {
+            num = 12 * (16 ** power)
+            DecimalNo += num
+        }
+        else if (numArr[i] == 'D') {
+            num = 13 * (16 ** power)
+            DecimalNo += num
+        }
+        else if (numArr[i] == 'E') {
+            num = 14 * (16 ** power)
+            DecimalNo += num
+        }
+        else if (numArr[i] == 'F') {
+            num = 15 * (16 ** power)
+            DecimalNo += num
+        }
+        power++
+    }
+    return DecimalNo
+}
+
+
 
 
 function BaseNumberConverter(number, base, newbase) {
@@ -69,6 +139,8 @@ function BaseNumberConverter(number, base, newbase) {
         return false;
     }
 }
+
+
 
 const form = document.querySelector('#form');
 const number = document.querySelector('.input-num');
