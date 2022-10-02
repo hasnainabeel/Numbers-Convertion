@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
 * {
     margin: 0;
@@ -15,7 +15,7 @@ body {
     width: 100%;
     overflow-x: hidden;
     font-size: 62.5%;
-    font-family: sans-serif;
+    font-family: 'DM Sans', sans-serif;
     letter-spacing: 1px;
     display: flex;
     flex-direction: column;
@@ -29,13 +29,14 @@ body {
     width: 80%;
     max-width: 500px;
     margin: auto;
-    padding: 1em 1em;
+    padding: 2em 2em;
     border: 0.1em solid rgb(0, 0, 0);
     background-color: #000000e8;
     display: flex;
     flex-direction: column;
     color: rgb(14, 162, 182);
-    border-radius: 15px;
+    border-radius: 8px;
+    
 }
 
 .container .container_title {
@@ -61,6 +62,9 @@ body {
     padding: 1em 0 1em 0.5em;
     font-size: 2em;
     color: rgb(185, 97, 14);
+    border: none;
+    border-radius:10px;
+    outline: none;
 }
 
 .option-container {
@@ -70,27 +74,33 @@ body {
     font-weight: bold;
     /* margin: 0.1em auto; */
     letter-spacing: 0.5px;
+    border: none;
+    border-radius:10px;
+    font-family: 'DM Sans', sans-serif;
+     outline: none;
 }
 
 .btns {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    
+    
 }
 
 .container .form .btn {
     padding: 1em;
     font-size: 1.7em;
     font-weight: bold;
-    background-color: #1b0386;
-    border: 1px solid #9390ff;
-    border-radius: 4px;
+    background-color: yellow;
+    border: none;
+    border-radius:10px;
+     font-family: 'DM Sans', sans-serif;
 }
 
 .container .form .answer {
     font-size: 2em;
     text-align: center;
-    border: 1px solid rgb(238, 255, 0);
 }
 
 .container .form .answer .ans-text {
