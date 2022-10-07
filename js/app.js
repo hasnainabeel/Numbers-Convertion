@@ -1,15 +1,3 @@
-function DecimalToBinaryConverter(baseTen) {
-    let binaryNumber = []
-
-    while (baseTen > 0) {
-        let rem = baseTen % 2
-        binaryNumber.push(rem)
-        baseTen = Math.floor(baseTen / 2)
-    }
-
-    return parseInt(binaryNumber.reverse().join(""))
-}
-
 function BinaryToDecimalConverter(baseTwo) {
     let bin = baseTwo.toString().split("")
     let power = 0
@@ -23,34 +11,29 @@ function BinaryToDecimalConverter(baseTwo) {
     return num
 }
 
-function DecimalToHexaDecimal(baseTen) {
-    let HexaNo = []
-    while (baseTen > 0) {
-        let rem = baseTen % 16
-        if (rem < 10) {
-            HexaNo.unshift(rem)
-        }
-        else if (rem == 10) {
-            HexaNo.unshift('A')
-        }
-        else if (rem == 11) {
-            HexaNo.unshift('B')
-        }
-        else if (rem == 12) {
-            HexaNo.unshift('C')
-        }
-        else if (rem == 13) {
-            HexaNo.unshift('D')
-        }
-        else if (rem == 14) {
-            HexaNo.unshift('E')
-        }
-        else if (rem == 15) {
-            HexaNo.unshift('F')
-        }
-        baseTen = Math.floor(baseTen / 16)
-    }
-    return HexaNo.join("")
+function BinaryToOctal(baseTwo) {
+    var octal = parseInt(baseTwo, 2).toString(8);
+    return octal
+}
+
+function BinaryToHexaDecimal(baseTwo) {
+    var hexa = parseInt(baseTwo, 2).toString(16);
+    return hexa
+}
+
+function OctalToDecimal(baseEight) {
+    var dec = parseInt(baseEight, 8).toString(10);
+    return dec
+}
+
+function OctalToBinary(baseEight) {
+    var bin = parseInt(baseEight, 8).toString(2);
+    return bin
+}
+
+function OctalToHexaDecimal(baseEight) {
+    var hexa = parseInt(baseEight, 8).toString(16);
+    return hexa
 }
 
 function HexaDecimalToDecimal(baseSixteen) {
@@ -92,7 +75,63 @@ function HexaDecimalToDecimal(baseSixteen) {
     return DecimalNo
 }
 
+function HexaDecimalToOctal(baseSixteen) {
+    var octa = parseInt(baseSixteen, 16).toString(8);
+    return octa
+}
 
+function HexaDecimalToBinary(baseSixteen) {
+    var bin = parseInt(baseSixteen, 16).toString(2);
+    return bin
+}
+
+function DecimalToBinaryConverter(baseTen) {
+    let binaryNumber = []
+
+    while (baseTen > 0) {
+        let rem = baseTen % 2
+        binaryNumber.push(rem)
+        baseTen = Math.floor(baseTen / 2)
+    }
+
+    return parseInt(binaryNumber.reverse().join(""))
+}
+
+
+function DecimalToHexaDecimal(baseTen) {
+    let HexaNo = []
+    while (baseTen > 0) {
+        let rem = baseTen % 16
+        if (rem < 10) {
+            HexaNo.unshift(rem)
+        }
+        else if (rem == 10) {
+            HexaNo.unshift('A')
+        }
+        else if (rem == 11) {
+            HexaNo.unshift('B')
+        }
+        else if (rem == 12) {
+            HexaNo.unshift('C')
+        }
+        else if (rem == 13) {
+            HexaNo.unshift('D')
+        }
+        else if (rem == 14) {
+            HexaNo.unshift('E')
+        }
+        else if (rem == 15) {
+            HexaNo.unshift('F')
+        }
+        baseTen = Math.floor(baseTen / 16)
+    }
+    return HexaNo.join("")
+}
+
+function DecimalToOctal(baseTwo) {
+    var bin = parseInt(baseTwo, 2).toString(8);
+    return bin
+}
 
 
 function BaseNumberConverter(number, base, newbase) {
@@ -276,7 +315,7 @@ const swap = (c, n) => {
     n.value = temp;
 }
 
-swapBtn.addEventListener('click', swap(currentBase, newBase));
+swapBtn.addEventListener('submit', swap(currentBase, newBase));
 
 resetBtn.addEventListener('click', () => {
     localStorage.clear();

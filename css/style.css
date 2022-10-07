@@ -8,6 +8,7 @@
 html {
     height: 100%;
     width: 100%;
+    background-color: #000000;
 }
 
 body {
@@ -30,7 +31,7 @@ body {
     max-width: 500px;
     margin: auto;
     padding: 2em 2em;
-    border: 0.1em solid rgb(0, 0, 0);
+    border: 0.2em solid rgb(222, 222, 222);
     background-color: #000000e8;
     display: flex;
     flex-direction: column;
@@ -61,10 +62,30 @@ body {
 .input-num {
     padding: 1em 0 1em 0.5em;
     font-size: 2em;
-    color: rgb(185, 97, 14);
+    letter-spacing: 0.5px;
+    /* color: rgb(185, 97, 14); */
+    color: rgba(0, 0, 0, 0.584);
     border: none;
     border-radius:10px;
-    outline: none;
+    outline: 0.1em solid rgb(222, 222, 222);
+    background-color: #777;
+    text-align: center;
+}
+
+.input-num::placeholder {
+    color: rgba(0, 0, 0, 0.584);
+}
+
+.input-num:hover::placeholder {
+    color: rgba(255, 255, 255, 0.811);
+}
+
+.input-num:hover, .option-container:hover{
+    box-shadow: inset 1000px 0 0 0 rgb(33, 33, 33);
+    /* color: aliceblue; */
+    color: rgba(255, 255, 255, 0.811);
+    transition: linear .3s;
+
 }
 
 .option-container {
@@ -77,14 +98,17 @@ body {
     border: none;
     border-radius:10px;
     font-family: 'DM Sans', sans-serif;
-     outline: none;
+    outline: 0.1em solid rgb(222, 222, 222);
+    background-color: #777;
+    color: rgba(0, 0, 0, 0.584);
 }
+
 
 .btns {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    
+    margin: 1.6px;
     
 }
 
